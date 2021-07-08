@@ -1,0 +1,21 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #222221;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+
+      .cls-2 {
+        fill: #222221;
+      }
+    </style>
+  </defs>
+  <title>Монтажная область 1</title>
+  <g id="_Группа_" data-name=" Группа ">
+    <path id="_Прямоугольник_" data-name=" Прямоугольник " class="cls-1" d="M20,1h0A19,19,0,0,1,39,20h0A19,19,0,0,1,20,39h0A19,19,0,0,1,1,20H1A19,19,0,0,1,20,1Z"/>
+    <path id="_Контур_" data-name=" Контур " class="cls-2" d="M17.1,31.5h4.63V19.9H25L25.31,16H21.73V13.81c0-.92.18-1.28,1.07-1.28h2.51v-4H22.1c-3.45,0-5,1.52-5,4.42v3.1H14.73V20h2.41Z"/>
+  </g>
+</svg>
