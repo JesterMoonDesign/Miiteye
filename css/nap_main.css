@@ -172,7 +172,8 @@ header h2 {
 
 @media (max-width: 500px) {
 	header {
-	background-position: bottom 0 right 28%;
+	background: url(../img/first-section-bg-minimizing.jpg);
+	background-position: bottom 50% right 0;
 	}
 	header div div {
 	width: 90%;
@@ -211,7 +212,7 @@ header h2 {
 	background: #2C2C2C;
 	border: 50px solid #2C2C2C;
 	border-radius: 50%;
-	opacity: 0.5;
+	opacity: 0;
 	transition: opacity ease-out 0.15s;
 }
 
@@ -538,7 +539,7 @@ header h2 {
 
 .section-4 {
 	width: 100%;
-	padding: 3.4375% 0 5.20833333333% 0;
+	padding: 5.20833333333% 0 5.20833333333% 0;
 }
 
 .section-4-slider-wraper {
