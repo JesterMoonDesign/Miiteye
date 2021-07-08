@@ -643,12 +643,14 @@ margin-top: 0.52083333333%;
 
 @media (max-width: 768px) {
 	.jestermoon-sign{
-	font-size: 1.8em;
+	font-size: 1.8em;;
+	margin: 1.04166666667% 0 4% 0;
 	}
 }
 
 @media (max-width: 500px) {
 	.jestermoon-sign{
 	font-size: 1.6em;
+	margin: 1.04166666667% 0 6% 0;
 	}
 }
