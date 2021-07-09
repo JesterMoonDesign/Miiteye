@@ -657,7 +657,7 @@ object-fit: cover;
 
 @media (max-width: 500px) {
 	.section-4-slider-wraper .slider-image-wraper:first-child {
-	margin-left: 11.2%;
+	margin-left: 10.5%;
 	}
 	.forward div {
 	transform: translate(-70%, -45%);
