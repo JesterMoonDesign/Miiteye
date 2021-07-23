@@ -28,27 +28,50 @@ const isMobile = {
 
 
 function section4Slider() {
-	const sliderImageContainer = document.querySelectorAll('.slider-image-wraper');
-	const sliderButton = document.querySelectorAll('.slider-nav');
+	let imagesContainer = document.querySelector('.slides');
+	const images = document.querySelectorAll('.slider-image-wraper');
+	const button = document.querySelectorAll('.slider_button');
+	const forward = document.querySelector('.forward')
+	const back = document.querySelector('.back')
+	const swiper = document.querySelector('.slider-nav')
 
-	let sliderWraper = document.querySelector('.section-4-slider-wraper');
-	let imageCount = sliderImageContainer.length;
-	let imageWidth = 
-(parseInt(getComputedStyle(sliderImageContainer[0]).width) * imageCount) + 
-(parseInt(getComputedStyle(sliderImageContainer[0]).marginRight) * imageCount) + 
-(parseInt(getComputedStyle(sliderButton[0]).width) * 2) + 
-parseInt(getComputedStyle(sliderButton[0]).marginRight)
+	let imageWidth = images[0].offsetWidth;
+	let imageMargin = parseInt(getComputedStyle(images[0]).marginRight);
+	let index = 0;
 
-console.log(imageWidth)
 
-	function sliderWraperResize() {
-		if (imageCount >= 3) {
-			sliderWraper.style.width = imageWidth + 'px'
+	function nextSlide () {
+		index++;
+		if (index > images.length - 3) {
+			index = images.length - 3
 		}
+		imagesContainer.style.transform = "translateX(-" + index * (imageWidth + imageMargin) + "px)";
+		imagesContainer.style.WebkitTransform = "translateX(-" + index * (imageWidth + imageMargin) + "px)";
+		imagesContainer.style.MozTransform = "translateX(-" + index * (imageWidth + imageMargin) + "px)";
+		console.log(index)
 	}
-// sliderWraperResize()
+	function prevSlide () {
+		imagesContainer.style.transform = "translateX(-" + (index * (imageWidth + imageMargin) - (imageWidth + imageMargin)) + "px)";
+		index--;
+		if (index < 0) {
+			index = 0
+		}
+		console.log(index)
+	}
 
+// function sliderSwipe (event) {
+
+// 	console.log(event.offsetX)
+// 	// imagesContainer.style.transform = "translateX(-" + event + "px)";
+// }
+
+	
+	// swiper.addEventListener('pointerdown', sliderSwipe)
+	forward.addEventListener('click', nextSlide)
+	back.addEventListener('click', prevSlide)
 }
+
+
 section4Slider()
 
 

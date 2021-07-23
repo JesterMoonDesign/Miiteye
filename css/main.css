@@ -422,7 +422,7 @@ header h2 {
 
 .section-3-img-container-1 {
 	position: relative;
-	margin: 0 0 6.604167% 0;
+	margin: 0 0 7.8% 0;
 	width: 100%;
 	padding-bottom: 56.4%;
 }
@@ -536,7 +536,7 @@ header h2 {
 
 .section-4 {
 	width: 100%;
-	padding: 5.20833333333% 0 5.20833333333% 0;
+	padding: 5.20833333333% 0 0 0;
 }
 
 
@@ -547,16 +547,22 @@ header h2 {
 
 
 .section-4-slider-wraper {
+	width: 84.6354166667%;
+	overflow: hidden;
 	margin: 0 auto;
+}
+
+.slides {
 	white-space: nowrap;
 	transform: translateX(0%);
+	transition: all linear 0.4s;
 }
 
 	.slider-image-wraper {
 	display: inline-block;
 	position: relative;
-	width: 26.6146%;
-	padding-bottom: 17.75%;
+	width: 31.39%;
+	padding-bottom: 20.95%;
 	margin: 0 2.60416666667% 0 0;
 }
 
@@ -564,9 +570,9 @@ header h2 {
 	z-index: 2;
 }
 
-.section-4-slider-wraper .slider-image-wraper:first-child {
+/*.section-4-slider-wraper .slider-image-wraper:first-child {
 	margin-left: 7.2%;
-}
+}*/
 
 .slider-image-wraper img {
 	position: absolute;
@@ -578,7 +584,8 @@ header h2 {
 
 .slider-nav {
 	width: 100%;
-	margin-top: -10%;
+	padding: 10% 0 10% 0;
+	margin-top: -20%;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
