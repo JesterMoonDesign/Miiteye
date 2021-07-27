@@ -92,7 +92,10 @@ function section4Slider() {
 				imagesContainer.style.transform = "translateX(-" + translateX + "px)";
 			}
 
-			swiper.ontouchend = function sliderSwipeCancel (event) {
+			swiper.addEventListener('touchend', sliderSwipeCancel);
+			swiper.addEventListener('touchcancel', sliderSwipeCancel);
+
+			function sliderSwipeCancel (event) {
 				document.body.removeEventListener('touchmove', onDrag, {passive: false});
 
 				let x3 = event.changedTouches[0].clientX;
@@ -110,17 +113,17 @@ function section4Slider() {
 						}
 				}
 
-		if (query.matches) {
-			if (index > images.length - 2) {
-			index = images.length - 2
-			}
-		} else {
-			if (index > images.length - 3) {
-			index = images.length - 3
-			}
-		}
-		if (index < 0) {index = 0}
-		imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
+				if (query.matches) {
+					if (index > images.length - 2) {
+					index = images.length - 2
+					}
+				} else {
+					if (index > images.length - 3) {
+					index = images.length - 3
+					}
+				}
+				if (index < 0) {index = 0}
+				imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
 			}
 		})
 	}
@@ -128,7 +131,7 @@ function section4Slider() {
 	if (isMobile.any()) {
 	sliderSwipe ();
 	}
-sliderSwipe ()
+
 	forward.addEventListener('click', nextSlide);
 	back.addEventListener('click', prevSlide);
 } section4Slider()
