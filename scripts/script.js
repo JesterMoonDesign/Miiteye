@@ -29,50 +29,109 @@ const isMobile = {
 
 function section4Slider() {
 	let imagesContainer = document.querySelector('.slides');
+	const sliderWraper = parseInt(getComputedStyle(document.querySelector('.section-4-slider-wraper')).width);
 	const images = document.querySelectorAll('.slider-image-wraper');
 	const button = document.querySelectorAll('.slider_button');
-	const forward = document.querySelector('.forward')
-	const back = document.querySelector('.back')
-	const swiper = document.querySelector('.slider-nav')
+	const forward = document.querySelector('.forward');
+	const back = document.querySelector('.back');
+	const swiper = document.querySelector('.section-4-slider-wraper');
+	const query = window.matchMedia('(max-width: 768px)');
 
 	let imageWidth = images[0].offsetWidth;
 	let imageMargin = parseInt(getComputedStyle(images[0]).marginRight);
+	let slideWidth = imageWidth + imageMargin;
 	let index = 0;
-
 
 	function nextSlide () {
 		index++;
-		if (index > images.length - 3) {
-			index = images.length - 3
-		}
-		imagesContainer.style.transform = "translateX(-" + index * (imageWidth + imageMargin) + "px)";
-		imagesContainer.style.WebkitTransform = "translateX(-" + index * (imageWidth + imageMargin) + "px)";
-		imagesContainer.style.MozTransform = "translateX(-" + index * (imageWidth + imageMargin) + "px)";
-		console.log(index)
+		if (query.matches) {
+			if (index > images.length - 2) {
+				index = 0
+			}
+		} else {
+			if (index > images.length - 3) {
+				index = 0
+			}
+				}
+			imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
+			imagesContainer.style.WebkitTransform = "translateX(-" + index * slideWidth + "px)";
+			imagesContainer.style.MozTransform = "translateX(-" + index * slideWidth + "px)";
 	}
+
 	function prevSlide () {
-		imagesContainer.style.transform = "translateX(-" + (index * (imageWidth + imageMargin) - (imageWidth + imageMargin)) + "px)";
-		index--;
-		if (index < 0) {
-			index = 0
+		if (query.matches) {
+			if (index <= 0) {
+				index = images.length - 1;
+			}
+		} else {
+			if (index <= 0) {
+				index = images.length - 2;
+			}
 		}
-		console.log(index)
+		imagesContainer.style.transform = "translateX(-" + (index * slideWidth - slideWidth) + "px)";
+		index--;
 	}
 
-// function sliderSwipe (event) {
+	function sliderSwipe () {
+		swiper.addEventListener('touchstart', () => {
 
-// 	console.log(event.offsetX)
-// 	// imagesContainer.style.transform = "translateX(-" + event + "px)";
-// }
+			document.body.addEventListener('touchmove', onDrag, {passive: false});
+			let x1 = event.targetTouches[0].clientX
 
-	
-	// swiper.addEventListener('pointerdown', sliderSwipe)
-	forward.addEventListener('click', nextSlide)
-	back.addEventListener('click', prevSlide)
-}
+			function onDrag (event) {
+				event.preventDefault();
 
+				let x2 = event.changedTouches[0].clientX;
+				let translateX = index * slideWidth;
 
-section4Slider()
+				if (x1 - x2 > 0) {
+				translateX = index * slideWidth + (sliderWraper - x2);
+				} else {
+				translateX = index * slideWidth - x2;
+				}
+				imagesContainer.style.transform = "translateX(-" + translateX + "px)";
+			}
+
+			swiper.ontouchend = function sliderSwipeCancel (event) {
+				document.body.removeEventListener('touchmove', onDrag, {passive: false});
+
+				let x3 = event.changedTouches[0].clientX;
+
+				if (x1-x3>=0 && (sliderWraper - x3) >= (slideWidth / 2 + 50)) {
+						index++;
+						if ((sliderWraper - x3) >= slideWidth + (slideWidth / 2 + 50)) {
+							index++;
+					if (query.matches) {
+						if (index > images.length - 2) {
+						index = images.length - 2
+						}
+					} else {
+						if (index > images.length - 3) {
+						index = images.length - 3
+						}
+					}
+				}}
+
+				if (x1-x3<0 && x3 > (slideWidth / 2 + 50)) {
+						index--;
+						if (x3 >= slideWidth + (slideWidth / 2)) {
+							index--;
+						}
+					if (index < 0) {index = 0}
+				}
+				imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
+				event.stopPropagation();
+			}
+		})
+	}
+
+	if (isMobile.any()) {
+	sliderSwipe ();
+	}
+
+	forward.addEventListener('click', nextSlide);
+	back.addEventListener('click', prevSlide);
+} section4Slider()
 
 
 // //														ПРОКРУТКА НАВЕРХ										

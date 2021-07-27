@@ -539,17 +539,12 @@ header h2 {
 	padding: 5.20833333333% 0 0 0;
 }
 
-
-
-
-
-
-
-
 .section-4-slider-wraper {
 	width: 84.6354166667%;
 	overflow: hidden;
 	margin: 0 auto;
+	position: relative;
+	z-index: 2;
 }
 
 .slides {
@@ -561,7 +556,7 @@ header h2 {
 	.slider-image-wraper {
 	display: inline-block;
 	position: relative;
-	width: 31.39%;
+	width: 31.47%;
 	padding-bottom: 20.95%;
 	margin: 0 2.60416666667% 0 0;
 }
@@ -569,10 +564,6 @@ header h2 {
 	.slider-image-wraper.active {
 	z-index: 2;
 }
-
-/*.section-4-slider-wraper .slider-image-wraper:first-child {
-	margin-left: 7.2%;
-}*/
 
 .slider-image-wraper img {
 	position: absolute;
@@ -584,8 +575,8 @@ header h2 {
 
 .slider-nav {
 	width: 100%;
-	padding: 10% 0 10% 0;
-	margin-top: -20%;
+	padding: 8% 0 8% 0;
+	margin-top: -18.8%;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -597,30 +588,12 @@ header h2 {
 	position: relative;
 }
 
-.forward div {
-	content: '';
-	padding-top: 400%;
-	pointer-events: none;
-	width: 500%;
-	background: #fff;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
-	transform: translate(-95%, -45%);
-}
-
-.forward div img {
-width: 300%;
-object-fit: cover;
-}
-
 .slider-nav img {
 	max-width: 100%;
 }
 
 .slider-nav .back {
-	margin: 0 2.60416666667% 0 5%;
+	margin-left: 5%;
 	transform: rotate(0deg);
 }
 
@@ -631,7 +604,7 @@ object-fit: cover;
 
 @media (max-width: 1200px) {
 	.slider-nav .back {
-	margin: 0 2.60416666667% 0 2.5%;
+	margin-left: 2.5%;
 	}
 	.slider-nav .forward {
 	margin-right: 2.5%;
@@ -643,37 +616,24 @@ object-fit: cover;
 
 @media (max-width: 768px) {
 	.slider-image-wraper {
-	width: 38%;
-	padding-bottom: 25.5%;
-	}
-	.section-4-slider-wraper .slider-image-wraper:nth-child(n+4) {
-		display: none;
+	width: 48.397917%;
+	padding-bottom: 32.8%;
 	}
 	.slider-nav {
-		margin-top: -20%;
-	}
-	.forward div {
-	width: 300%;
-	padding-top: 0;
-	transform: translate(-40%, -45%);
-	}
-	.section-4-slider-wraper .slider-image-wraper:first-child {
-	margin-left: 10.2%;
+	padding: 10% 0 10% 0;
+	margin-top: -29%;
 	}
 }
 
 @media (max-width: 500px) {
-	.section-4-slider-wraper .slider-image-wraper:first-child {
-	margin-left: 10.5%;
-	}
-	.forward div {
-	transform: translate(-70%, -45%);
+	.slider_button {
+	width: 4%;
 	}
 	.slider-nav .back {
-	margin: 0 2.60416666667% 0 1.5%;
+	margin: 2%;
 	}
 	.slider-nav .forward {
-	margin-right: 1.5%;
+	margin-right: 2%;
 	}
 }
 
