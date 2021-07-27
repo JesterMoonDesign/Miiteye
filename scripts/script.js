@@ -86,7 +86,8 @@ function section4Slider() {
 
 				if (x1 - x2 > 0) {
 				translateX = index * slideWidth + (sliderWraper - x2);
-				} else {
+				} 
+				if (x1 - x2 < 0) {
 				translateX = index * slideWidth - x2;
 				}
 				imagesContainer.style.transform = "translateX(-" + translateX + "px)";
@@ -131,7 +132,7 @@ function section4Slider() {
 	if (isMobile.any()) {
 	sliderSwipe ();
 	}
-
+	
 	forward.addEventListener('click', nextSlide);
 	back.addEventListener('click', prevSlide);
 } section4Slider()
