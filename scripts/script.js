@@ -101,15 +101,6 @@ function section4Slider() {
 						index++;
 						if ((sliderWraper - x3) >= slideWidth + (slideWidth / 2 + 50)) {
 							index++;
-					if (query.matches) {
-						if (index > images.length - 2) {
-						index = images.length - 2
-						}
-					} else {
-						if (index > images.length - 3) {
-						index = images.length - 3
-						}
-					}
 				}}
 
 				if (x1-x3<0 && x3 > (slideWidth / 2 + 50)) {
@@ -117,10 +108,19 @@ function section4Slider() {
 						if (x3 >= slideWidth + (slideWidth / 2)) {
 							index--;
 						}
-					if (index < 0) {index = 0}
 				}
-				imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
-				event.stopPropagation();
+
+		if (query.matches) {
+			if (index > images.length - 2) {
+			index = images.length - 2
+			}
+		} else {
+			if (index > images.length - 3) {
+			index = images.length - 3
+			}
+		}
+		if (index < 0) {index = 0}
+		imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
 			}
 		})
 	}
@@ -128,7 +128,7 @@ function section4Slider() {
 	if (isMobile.any()) {
 	sliderSwipe ();
 	}
-
+sliderSwipe ()
 	forward.addEventListener('click', nextSlide);
 	back.addEventListener('click', prevSlide);
 } section4Slider()

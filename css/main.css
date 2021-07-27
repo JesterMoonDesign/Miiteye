@@ -629,11 +629,15 @@ header h2 {
 	.slider_button {
 	width: 4%;
 	}
+	.slider-nav {
+	padding: 10% 0 10% 0;
+	margin-top: -30.5%;
+	}
 	.slider-nav .back {
-	margin: 2%;
+	margin: 2.5%;
 	}
 	.slider-nav .forward {
-	margin-right: 2%;
+	margin-right: 2.5%;
 	}
 }
 
