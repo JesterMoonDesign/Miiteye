@@ -43,6 +43,7 @@ function section4Slider() {
 	let index = 0;
 
 	function nextSlide () {
+		sliderClearTimeout ();
 		index++;
 		if (query.matches) {
 			if (index > images.length - 2) {
@@ -59,6 +60,7 @@ function section4Slider() {
 	}
 
 	function prevSlide () {
+		sliderClearTimeout ();
 		if (query.matches) {
 			if (index <= 0) {
 				index = images.length - 1;
@@ -69,19 +71,22 @@ function section4Slider() {
 			}
 		}
 		imagesContainer.style.transform = "translateX(-" + (index * slideWidth - slideWidth) + "px)";
+		imagesContainer.style.WebkitTransform = "translateX(-" + (index * slideWidth - slideWidth) + "px)";
+		imagesContainer.style.MozTransform = "translateX(-" + (index * slideWidth - slideWidth) + "px)";
 		index--;
 	}
 
 	function sliderSwipe () {
 		swiper.addEventListener('touchstart', () => {
 
+			sliderClearTimeout ();
 			document.body.addEventListener('touchmove', onDrag, {passive: false});
 			let x1 = event.targetTouches[0].clientX
 
 			function onDrag (event) {
 				event.preventDefault();
 
-				let x2 = event.changedTouches[0].clientX * 0.65;
+				let x2 = event.changedTouches[0].clientX * 0.7;
 				let translateX = index * slideWidth;
 
 				if (x1 - x2 > 0) {
@@ -91,6 +96,8 @@ function section4Slider() {
 				translateX = index * slideWidth - x2;
 				}
 				imagesContainer.style.transform = "translateX(-" + translateX + "px)";
+				imagesContainer.style.WebkitTransform = "translateX(-" + translateX + "px)";
+				imagesContainer.style.MozTransform = "translateX(-" + translateX + "px)";
 			}
 
 			swiper.addEventListener('touchend', sliderSwipeCancel);
@@ -125,12 +132,22 @@ function section4Slider() {
 				}
 				if (index < 0) {index = 0}
 				imagesContainer.style.transform = "translateX(-" + index * slideWidth + "px)";
+				imagesContainer.style.WebkitTransform = "translateX(-" + index * slideWidth + "px)";
+				imagesContainer.style.MozTransform = "translateX(-" + index * slideWidth + "px)";
 			}
 		})
 	}
 
 	if (isMobile.any()) {
 	sliderSwipe ();
+	}
+
+
+	let sliderSetTimeout = setInterval(nextSlide, 1500);
+
+	function sliderClearTimeout () {
+		clearInterval(sliderSetTimeout);
+		sliderSetTimeout = setInterval(nextSlide, 1500);
 	}
 
 	forward.addEventListener('click', nextSlide);
