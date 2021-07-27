@@ -81,7 +81,7 @@ function section4Slider() {
 			function onDrag (event) {
 				event.preventDefault();
 
-				let x2 = event.changedTouches[0].clientX * 0.7;
+				let x2 = event.changedTouches[0].clientX * 0.6;
 				let translateX = index * slideWidth;
 
 				if (x1 - x2 > 0) {
