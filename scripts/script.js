@@ -81,7 +81,7 @@ function section4Slider() {
 			function onDrag (event) {
 				event.preventDefault();
 
-				let x2 = event.changedTouches[0].clientX;
+				let x2 = event.changedTouches[0].clientX * 0.7;
 				let translateX = index * slideWidth;
 
 				if (x1 - x2 > 0) {
@@ -132,7 +132,7 @@ function section4Slider() {
 	if (isMobile.any()) {
 	sliderSwipe ();
 	}
-	
+
 	forward.addEventListener('click', nextSlide);
 	back.addEventListener('click', prevSlide);
 } section4Slider()
