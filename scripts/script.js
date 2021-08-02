@@ -143,11 +143,11 @@ function section4Slider() {
 	}
 
 
-	let sliderSetTimeout = setInterval(nextSlide, 2000);
+	let sliderSetTimeout = setInterval(nextSlide, 1500);
 
 	function sliderClearTimeout () {
 		clearInterval(sliderSetTimeout);
-		sliderSetTimeout = setInterval(nextSlide, 2000);
+		sliderSetTimeout = setInterval(nextSlide, 1500);
 	}
 
 	forward.addEventListener('click', nextSlide);

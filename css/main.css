@@ -237,7 +237,7 @@ header h2 {
 	.main-arrow {
 	width: 35px;
 	height: 35px;
-	margin: -25% auto 0 auto;
+	margin: -35% auto 0 auto;
 	}
 	.main-arrow:after {
 	top: -1.5em;
@@ -517,8 +517,13 @@ header h2 {
 
 @media (max-width: 768px) {
 	.section-3-galler-link {
-	margin-top: 6%;
+	width: 100%;
+	margin: 6% auto 0 auto;
 	background: rgba(221, 221, 221, 0.7);
+	}
+	.section-3-galler-link p {
+	padding: 0.78125% 0 0.78125% 0;
+	margin: 0 auto;
 	}
 }
 
@@ -670,25 +675,25 @@ footer {
 	flex-wrap: wrap;
 }
 
-.social-medias-wraper img {
+.social-medias-wraper a {
 	width: 3%;
 	margin: 0.52083333333% 1% 0 1%;
 }
 
 @media (max-width: 1200px) {
-	.social-medias-wraper img {
+	.social-medias-wraper a {
 	width: 4%;
 	}
 }
 
 @media (max-width: 768px) {
-	.social-medias-wraper img {
+	.social-medias-wraper a {
 	width: 5%;
 	}
 }
 
 @media (max-width: 500px) {
-	.social-medias-wraper img {
+	.social-medias-wraper a {
 	width: 7%;
 	margin: 0.52083333333% 2% 0 2%;
 	}
