@@ -19,6 +19,7 @@ button {
 a {
 	color: #000;
 	text-decoration: underline;
+	transition: color ease 0.2s;
 }
 
 a:hover {
@@ -143,6 +144,24 @@ header a {
 
 header a img {
 	width: 0.4em;
+}
+
+.main-arrow {
+	margin: -13.458333% auto 0 -13%;
+	display: block;
+	width: 1em;
+	height: 1em;
+	position: relative;
+	border-style: solid;
+	border-width: 0 0 3px 3px;
+	border-color: transparent transparent #000 #000;
+	transform: rotate(45deg) translate(30px, 25px);
+	-webkit=transform: rotate(45deg);
+	transition: transform ease-in 0.2s, border-color ease 0.2s;
+}
+
+.main-arrow:hover {
+	border-color: transparent transparent #fff #fff;
 }
 
 	header a span:nth-child(3) {

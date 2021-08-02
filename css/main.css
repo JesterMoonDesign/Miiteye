@@ -23,6 +23,7 @@ a {
 
 a:hover {
 	color: #fff;
+	transition: color ease 0.2s;
 }
 
 a img {
@@ -293,6 +294,8 @@ header h2 {
 	width: 40.15625%;
 	position: relative;
 	z-index: 2;
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
 }
 
 .section-2 h2 {
@@ -402,7 +405,7 @@ header h2 {
 	z-index: -1;
 	width: 130%;
 	padding-bottom: 84%;
-	margin: -25% auto 0 -15%;
+	margin: 0 auto 0 -15%;
 	}
 }
 
