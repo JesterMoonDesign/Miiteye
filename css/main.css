@@ -24,6 +24,18 @@ a {
 a:hover {
 	color: #fff;
 	transition: color ease 0.2s;
+	-webkit-transition: color ease 0.2s;
+	-moz-transition: color ease 0.2s;
+}
+
+@media (max-width: 425px) {
+	a:hover {
+	color: inherit;
+	}
+	a:active {
+	color: #fff;
+	color: inherit;
+	}
 }
 
 a img {
@@ -188,7 +200,7 @@ header h2 {
 	}
 }
 
-.main-arrow {
+.main_arrow {
 	margin: -9% auto 0 auto;
 	display: block;
 	width: 55px;
@@ -199,10 +211,14 @@ header h2 {
 	border-color: transparent transparent #fff #fff;
 	transform: rotate(-45deg);
 	transition: transform ease-in 0.2s;
+	-webkit-transition: transform ease-in 0.2s;
+	-moz-transition: transform ease-in 0.2s;
 	transition: border-color ease 0.2s;
+	-webkit-transition: transform ease-in 0.2s;
+	-moz-transition: transform ease-in 0.2s;
 }
 
-.main-arrow:after {
+.main_arrow:after {
 	content: '';
 	position: absolute;
 	top: -1.5em;
@@ -212,62 +228,65 @@ header h2 {
 	border-radius: 50%;
 	opacity: 0;
 	transition: opacity ease-out 0.15s;
+	-webkit-transition: opacity ease-out 0.15s;
+	-moz-transition: opacity ease-out 0.15s;
+
 }
 
 @media (max-width: 1200px) {
-	.main-arrow {
+	.main_arrow {
 	margin: -12% auto 0 auto;
 	}
-	.main-arrow:after {
+	.main_arrow:after {
 	top: -1.5em;
 	left: -4.5em;
 	}
 }
 
 @media (max-width: 768px) {
-	.main-arrow {
+	.main_arrow {
 	margin: -20% auto 0 auto;
 	}
-	.main-arrow:after {
+	.main_arrow:after {
 	top: -1.5em;
 	left: -4.5em;
 	}
 }
 
 @media (max-width: 425px) {
-	.main-arrow {
+	.main_arrow {
 	width: 35px;
 	height: 35px;
 	margin: -35% auto 0 auto;
 	}
-	.main-arrow:after {
+	.main_arrow:after {
 	top: -1.5em;
 	left: -4em;
 	border: 35px solid #2C2C2C;
 	}
 }
 
-.main-arrow:hover:after {
+.main_arrow:hover:after {
 	opacity: 0.2;
 }
 
-.main-arrow:active:after {
+.main_arrow:active:after {
 	opacity: 0.5;
 }
 
 @media (max-width: 1100px) {
-	.main-arrow {
+	.main_arrow {
 		margin-top: -15%;
 	}
 }
 
 @media (max-width: 600px) {
-	.main-arrow {
+	.main_arrow {
 		margin-top: -25%;
 	}
 }
 
-.section-2 {
+.section_2 {
 	max-width: 100%;
 	margin: 3.64583333333% auto 1.30208333333% auto;
 	width: 100%;
@@ -298,7 +317,7 @@ header h2 {
 	-webkit-backdrop-filter: blur(3px);
 }
 
-.section-2 h2 {
+.section_2 h2 {
 	max-width: 78.4695%;
 	font-family: 'Castoro', serif;
 	text-align: center;
@@ -307,7 +326,7 @@ header h2 {
 	color: #000;
 }
 
-.section-2 p {
+.section_2 p {
 	max-width: 78.4695%;
 	font-family: 'Castoro', serif;
 	font-size: 2.5em; /*_1.3vw!!25px_*/
@@ -329,7 +348,7 @@ header h2 {
 	overflow: hidden;
 }
 
-.section-2 img {
+.section_2 img {
 	max-width: 100%;
 	object-fit: cover;
 	position: absolute;
@@ -350,10 +369,10 @@ header h2 {
 		width: 70%;
 		padding-bottom: 2.60416666667%;
 	}
-	.section-2 h2 {
+	.section_2 h2 {
 		max-width: 100%;
 	}
-	.section-2 p {
+	.section_2 p {
 		max-width: 100%;
 		text-indent: 4%;
 		margin-top: 2%;
@@ -390,12 +409,12 @@ header h2 {
 	width: 100%;
 	margin: -45% auto 0 auto;
 	}
-	.section-2 h2 {
+	.section_2 h2 {
 	max-width: 90%;
 	margin: 0 auto;
 	background: rgba(255, 255, 255, 0.7);
 	}
-	.section-2 p {
+	.section_2 p {
 	margin: 0 auto 0 auto;
 	padding: 2.5% 5% 0 5%;
 	max-width: 80%;
@@ -559,6 +578,8 @@ header h2 {
 	white-space: nowrap;
 	transform: translateX(0%);
 	transition: all linear 0.4s;
+	-webkit-transition: all linear 0.4s;
+	-moz-transition: all linear 0.4s;
 }
 
 	.slider-image-wraper {
@@ -646,9 +667,30 @@ header h2 {
 	margin-right: 2.5%;
 	}
 }
+.slider_button:hover {
+	filter: invert(99%) sepia(0%) saturate(7073%) hue-rotate(47deg) brightness(123%) contrast(73%) drop-shadow(-3px 3px 2px #969696);
+	-webkit-filter: invert(99%) sepia(0%) saturate(7073%) hue-rotate(47deg) brightness(123%) contrast(73%) drop-shadow(-3px 3px 2px #969696);
+	-moz-filter: invert(99%) sepia(0%) saturate(7073%) hue-rotate(47deg) brightness(123%) contrast(73%) drop-shadow(-3px 3px 2px #969696);
+	transition: all ease 0.1s;
+	-webkit-transition: all ease 0.1s;
+	-moz-transition: all ease 0.1s;
+}
 
-
-
+@media (max-width: 425px) {
+	.slider_button:hover {
+	filter: invert(0) sepia(0%) saturate(0) hue-rotate(0) brightness(0) contrast(0) drop-shadow(0px 0px 0px #969696);
+	-webkit-filter: invert(0) sepia(0%) saturate(0) hue-rotate(0) brightness(0) contrast(0) drop-shadow(0px 0px 0px #969696);
+	-moz-filter: invert(0) sepia(0%) saturate(0) hue-rotate(0) brightness(0) contrast(0) drop-shadow(0px 0px 0px #969696);
+	}
+	.slider_button:active {
+	filter: invert(99%) sepia(0%) saturate(7073%) hue-rotate(47deg) brightness(123%) contrast(73%) drop-shadow(-3px 3px 2px #969696);
+	-webkit-filter: invert(99%) sepia(0%) saturate(7073%) hue-rotate(47deg) brightness(123%) contrast(73%) drop-shadow(-3px 3px 2px #969696);
+	-moz-filter: invert(99%) sepia(0%) saturate(7073%) hue-rotate(47deg) brightness(123%) contrast(73%) drop-shadow(-3px 3px 2px #969696);
+	transition: all ease 0.1s;
+	-webkit-transition: all ease 0.1s;
+	-moz-transition: all ease 0.1s;
+	}
+}
 
 footer {
 	width: 100%;
@@ -681,6 +723,28 @@ footer {
 .social-medias-wraper a {
 	width: 3%;
 	margin: 0.52083333333% 1% 0 1%;
+}
+
+.social-medias-wraper a:hover {
+	filter: invert(99%) sepia(1%) saturate(4708%) hue-rotate(270deg) brightness(118%) contrast(100%) drop-shadow(-3px 3px 2px #969696);
+	-webkit-filter: invert(99%) sepia(1%) saturate(4708%) hue-rotate(270deg) brightness(118%) contrast(100%) drop-shadow(-3px 3px 2px #969696);
+	-moz-filter: invert(99%) sepia(1%) saturate(4708%) hue-rotate(270deg) brightness(118%) contrast(100%) drop-shadow(-3px 3px 2px #969696);
+	transition: all ease 0.1s;
+	-webkit-transition: all ease 0.1s;
+	-moz-transition: all ease 0.1s;
+}
+
+@media (max-width: 425px) {
+	.social-medias-wraper a:hover {
+	filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(0) drop-shadow(0px 0px 0px #969696);
+	-webkit-filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(0) drop-shadow(0px 0px 0px #969696);
+	-moz-filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(0) drop-shadow(0px 0px 0px #969696);
+	}
+	.social-medias-wraper a:active {
+	filter: invert(99%) sepia(1%) saturate(4708%) hue-rotate(270deg) brightness(118%) contrast(100%) drop-shadow(-3px 3px 2px #969696);
+	-webkit-filter: invert(99%) sepia(1%) saturate(4708%) hue-rotate(270deg) brightness(118%) contrast(100%) drop-shadow(-3px 3px 2px #969696);
+	-moz-filter: invert(99%) sepia(1%) saturate(4708%) hue-rotate(270deg) brightness(118%) contrast(100%) drop-shadow(-3px 3px 2px #969696);
+	}
 }
 
 @media (max-width: 1200px) {

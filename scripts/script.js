@@ -26,6 +26,19 @@ const isMobile = {
 	}
 };
 
+function scrollDown () {
+	const btn = document.querySelector('.main_arrow');
+	const anchor = document.querySelector('.section_2');
+	btn.addEventListener('click', scroll);
+	function scroll() {
+		let anchorPosition = anchor.getBoundingClientRect().top;
+			if (anchorPosition > 20) {
+			window.scrollBy(0, 15);
+			setTimeout(scroll, 5);
+			}
+		};
+
+}; scrollDown ()
 
 function section4Slider() {
 	let imagesContainer = document.querySelector('.slides');
@@ -152,7 +165,7 @@ function section4Slider() {
 
 	forward.addEventListener('click', nextSlide);
 	back.addEventListener('click', prevSlide);
-} section4Slider()
+}; section4Slider()
 
 
 // //														ПРОКРУТКА НАВЕРХ										
