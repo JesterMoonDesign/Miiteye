@@ -235,7 +235,7 @@ header h2 {
 
 @media (max-width: 1200px) {
 	.main_arrow {
-	margin: -25% auto 0 auto;
+	margin: -12% auto 0 auto;
 	}
 	.main_arrow:after {
 	top: -1.5em;
@@ -257,7 +257,7 @@ header h2 {
 	.main_arrow {
 	width: 35px;
 	height: 35px;
-	margin: -35% auto 0 auto;
+	margin: -55% auto 0 auto;
 	}
 	.main_arrow:after {
 	top: -1.5em;
