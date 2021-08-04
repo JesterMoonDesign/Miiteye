@@ -26,6 +26,8 @@ const isMobile = {
 	}
 };
 
+const query = window.matchMedia('(min-width: 768px)');
+
 function galleryModal () {
 
 	const imagesWrapers = document.querySelectorAll('.image__wraper');
@@ -74,4 +76,4 @@ function galleryModal () {
 
 	}
 
-}; galleryModal ();
+}; if (query.matches) {galleryModal ();}
