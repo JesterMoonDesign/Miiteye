@@ -187,7 +187,7 @@ header h2 {
 	}
 	header div div {
 	width: 90%;
-	margin: 0 auto;
+	margin: -10% auto 0 auto;
 	}
 	header h1 {
 	font-size: 50px;
@@ -245,7 +245,7 @@ header h2 {
 
 @media (max-width: 768px) {
 	.main_arrow {
-	margin: -20% auto 0 auto;
+	margin: -30% auto 0 auto;
 	}
 	.main_arrow:after {
 	top: -1.5em;
@@ -257,7 +257,7 @@ header h2 {
 	.main_arrow {
 	width: 35px;
 	height: 35px;
-	margin: -55% auto 0 auto;
+	margin: -50% auto 0 auto;
 	}
 	.main_arrow:after {
 	top: -1.5em;
@@ -272,18 +272,6 @@ header h2 {
 
 .main_arrow:active:after {
 	opacity: 0.5;
-}
-
-@media (max-width: 1100px) {
-	.main_arrow {
-		margin-top: -15%;
-	}
-}
-
-@media (max-width: 600px) {
-	.main_arrow {
-		margin-top: -25%;
-	}
 }
 
 .section_2 {
