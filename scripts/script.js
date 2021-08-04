@@ -33,8 +33,8 @@ function scrollDown () {
 	function scroll() {
 		let anchorPosition = anchor.getBoundingClientRect().top;
 			if (anchorPosition > 20) {
-			window.scrollBy(0, 15);
-			setTimeout(scroll, 8);
+			window.scrollBy(0, 50);
+			setTimeout(scroll, 10);
 			}
 		};
 
