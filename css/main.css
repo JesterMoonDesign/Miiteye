@@ -319,7 +319,7 @@ header h2 {
 	margin-top: 4%;
 	max-width: 78.4695%;
 	font-family: 'Castoro', serif;
-	font-size: 2.5em; /*_1.3vw!!25px_*/
+	font-size: 2em; /*_1.3vw!!25px_*/
 }
 
 .section-2-image-2 {
@@ -518,7 +518,7 @@ header h2 {
 }
 .section-3-galler-link p {
 	font-family: 'Castoro', serif;
-	font-size: 3.5em;
+	font-size: 3em;
 	line-height: 44px;
 	letter-spacing: 0.15em;
 	color: #000000;
@@ -699,7 +699,7 @@ footer {
 
 .footer-flexbox h2 {
 	font-family: 'Castoro', serif;
-	font-size: 3.5em;
+	font-size: 3em;
 	letter-spacing: 0.15em;
 	margin-top: 0.52083333333%;
 }
@@ -760,7 +760,7 @@ footer {
 
 .copyright {
 	font-family: 'Castoro', serif;
-	font-size: 2.5em;
+	font-size: 2em;
 	margin-top: 1.30208333333%;
 }
 

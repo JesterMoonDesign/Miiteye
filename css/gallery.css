@@ -142,14 +142,14 @@ header a {
 	margin-left: 5.20833333333%;
 	font-family: Castoro;
 	font-style: italic;
-	font-size: 3.5em;
+	font-size: 2em;
 	letter-spacing: 0.15em;
 	text-align: center;
 }
 
 header a img {
 	width: 0.4em;
-	margin-top: 1%;
+	margin-top: 5%;
 }
 
 	header a span:nth-child(3) {
@@ -172,9 +172,9 @@ header a img {
 
 h1 {
 	font-family: Castoro;
-	font-size: 7em;
+	font-size: 4em;
 	letter-spacing: 0.15em;
-	margin: 0 auto;
+	margin: 0 0 0 45%;
 }
 
 .big-wraper {
