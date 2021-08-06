@@ -279,7 +279,7 @@ header h2 {
 
 .section_2 {
 	max-width: 100%;
-	margin: 3.64583333333% auto 1.30208333333% auto;
+	margin: 4.208333% auto 1.30208333333% auto;
 	width: 100%;
 	position: relative;
 }
@@ -309,13 +309,14 @@ header h2 {
 .section_2 h2 {
 	max-width: 78.4695%;
 	font-family: 'Castoro', serif;
-	text-align: center;
+	text-align: left;
 	font-size: 3.5em; /*_1.82vw!!35px_*/
 	letter-spacing: 0.15em;
 	color: #000;
 }
 
 .section_2 p {
+	margin-top: 4%;
 	max-width: 78.4695%;
 	font-family: 'Castoro', serif;
 	font-size: 2.5em; /*_1.3vw!!25px_*/
@@ -420,7 +421,7 @@ header h2 {
 }
 
 .section-3-wraper {
-	margin-top: 2.60416666667%;
+	margin-top: 4.208333%;
 	position: relative;
 	max-width: 100%;
 	display: flex;

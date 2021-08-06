@@ -32,7 +32,7 @@ function scrollDown () {
 	btn.addEventListener('click', scroll);
 	function scroll() {
 		let anchorPosition = anchor.getBoundingClientRect().top;
-			if (anchorPosition > 20) {
+			if (anchorPosition > 80) {
 			window.scrollBy(0, 50);
 			setTimeout(scroll, 10);
 			}
