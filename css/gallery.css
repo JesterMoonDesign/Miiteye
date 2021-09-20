@@ -277,6 +277,11 @@ h1 {
 	padding-bottom: 18.042%;
 }
 
+.image__wraper {
+	cursor: pointer;
+	pointer-events: auto;
+}
+
 @media (max-width: 600px) {
 	header {
 	width: 100%;
@@ -351,6 +356,10 @@ h1 {
 	margin-top: 4.16666666666%;
 	width: 76%;
 	padding-bottom: 50%;
+	}
+	.image__wraper {
+		cursor: default;
+		pointer-events: none;
 	}
 }
 
